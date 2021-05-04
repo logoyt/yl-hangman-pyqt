@@ -13,7 +13,9 @@ for file in files:
         for line in f:
             if line.strip():
                 if not line.strip().startswith('#'):
-                    count += 1
+                    if not line.strip().startswith('import'):
+                        if not line.strip().startswith('from'):
+                            count += 1
     if file == 'db': # вычитаю словарь слов
         count -= 15
         print(f'{file}-15', count)
@@ -23,10 +25,10 @@ for file in files:
 print(f'{total=}')
 
 '''
-db-15 172
-game 76
-main 70
-utility 13
-words_table 34
-total=365
+db-15 168
+game 68
+main 61
+utility 12
+words_table 28
+total=337
 '''
