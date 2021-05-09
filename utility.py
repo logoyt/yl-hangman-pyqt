@@ -12,6 +12,7 @@ class Singleton(type):
 
 
 def clear_word(word):
+    word = word.strip()
     if word:
         word = word.split()[0].lower().replace('ё', 'е')
         word = re.sub('[^а-я]+', '', word)

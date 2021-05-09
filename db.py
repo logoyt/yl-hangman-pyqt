@@ -74,6 +74,7 @@ BASIC_WORDS = {
     ],
 }
 
+
 class Database(metaclass=Singleton):
     _PATH = 'words_db.sqlite'
     def __init__(self):

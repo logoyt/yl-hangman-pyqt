@@ -6,6 +6,7 @@ import sys
 
 from db import Database
 
+
 class TableWords(QMainWindow):
     def __init__(self, parent=None):
         super().__init__()
@@ -31,6 +32,7 @@ class TableWords(QMainWindow):
         if self.parent:
             self.parent.show()
         event.accept()
+
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)
